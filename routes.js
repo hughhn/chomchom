@@ -9,6 +9,7 @@ exports = module.exports = function(app, passport, passportConf) {
 	var userController = require('./controllers/user');
 	var apiController = require('./controllers/api');
 	var contactController = require('./controllers/contact');
+	var streamController = require('./controllers/stream');
 
   	/**
 	 * Primary app routes.
@@ -30,6 +31,8 @@ exports = module.exports = function(app, passport, passportConf) {
 	app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 	app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 	app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
+
+	app.get('/streams', streamController.getStreams);
 
 	/**
 	 * API examples routes.
