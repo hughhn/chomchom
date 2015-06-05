@@ -9,15 +9,10 @@
       a.navbar-brand(href='/')
         i.fa.fa-cube
     .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li(class=title=='Post'?'active':undefined)
-          p.navbar-btn
-            a.btn.btn-default(href='#', role='button') Post It »
-        li(class=title=='Form'?'active':undefined)
-          form.navbar-form(role='search')
-            div.form-group
-              input.form-control(type='text', placeholder='$list new item')
-              button.btn.btn-default(type='submit') Post It »
+      form.navbar-form.navbar-left(role='search')
+        .form-group
+          input.form-control(type='text', placeholder='$list new item')
+          button.btn.btn-default(type='submit') Post
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=title=='Login'?'active':undefined)
