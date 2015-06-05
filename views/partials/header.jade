@@ -13,6 +13,11 @@
         li(class=title=='Post'?'active':undefined)
           p.navbar-btn
             a.btn.btn-default(href='#', role='button') Post It »
+        li(class=title=='Form'?'active':undefined)
+          form.navbar-form(role='search')
+            div.form-group
+              input.form-control(type='text', placeholder='$list new item')
+              button.btn.btn-default(type='submit') Post It »
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=title=='Login'?'active':undefined)
